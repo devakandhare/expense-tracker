@@ -29,7 +29,7 @@ function App() {
 
   const handleChangeAmount = (event) => {
     const numberRegex = /^\d+$/;
-    if (numberRegex.test(event.target.value)) {
+    if (event.target.value === "" || numberRegex.test(event.target.value)) {
       setAmount(event.target.value);
     }
   };
