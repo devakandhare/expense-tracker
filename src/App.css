@@ -36,3 +36,19 @@ h2 {
   color: #f12d24;
   padding: 10px 10px;
 }
+.options {
+  margin-top: 20px;
+  display: flex;
+  width: 650px;
+  justify-content: flex-end;
+}
+.btn-opt {
+  background-color: #23d0ff;
+  border: 1px solid #b4b8b9;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.inactive {
+  opacity: 0.6;
+}

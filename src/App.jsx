@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Expenses } from "./Expenses";
+import { ExpensesByCategory } from "./ExpensesByCategory";
 
 const categories = [
   { value: "", label: "Select Category" },
@@ -16,6 +17,7 @@ function App() {
   const [amount, setAmount] = useState("");
   const [error, setError] = useState(false);
   const [expenses, setExpsenses] = useState([]);
+  const [option, setOption] = useState("general");
 
   const handleChangeCategory = (event) => {
     setSelectedCategory(event.target.value);
@@ -95,8 +97,30 @@ function App() {
           </button>
         </form>
         {error && <div className="error">Please enter all values</div>}
+        <div className="options">
+          <button
+            className={`btn-opt ${option !== "general" ? "inactive" : ""}`}
+            onClick={() => {
+              setOption("general");
+            }}
+          >
+            General
+          </button>
+          <button
+            className={`btn-opt ${option !== "by-category" ? "inactive" : ""}`}
+            onClick={() => {
+              setOption("by-category");
+            }}
+          >
+            By Categories
+          </button>
+        </div>
         <div className="expense-display-container">
-          <Expenses expenses={expenses} handleDelete={deleteExpense} />
+          {option === "general" ? (
+            <Expenses expenses={expenses} handleDelete={deleteExpense} />
+          ) : (
+            <ExpensesByCategory expenses={expenses} />
+          )}
         </div>
       </div>
     </>
