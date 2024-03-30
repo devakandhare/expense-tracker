@@ -1,0 +1,20 @@
+table {
+  margin-top: 20px;
+  width: 650px;
+  border-collapse: collapse;
+}
+tr {
+  padding: 10px;
+  border-bottom: 1px solid #bfbaba;
+}
+
+thead {
+  background-color: #207a92;
+  color: #fff;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 5px;
+}

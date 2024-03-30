@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+h2 {
+  color: #207a92;
+}
+.category-select {
+  padding: 7px 10px;
+}
+.input-description {
+  padding: 7px 10px;
+  margin-left: 10px;
+}
+.input-amount {
+  padding: 7px 10px;
+  margin-left: 10px;
+  text-align: right;
+}
+.btn {
+  padding: 7px 10px;
+  margin-left: 10px;
+  background-color: #c70039;
+  color: #fff;
+  border: 1px solid #c70039;
+  cursor: pointer;
+}
+
+.delete-icon {
+  color: #c70039;
+  cursor: pointer;
+}
+.error {
+  color: #f12d24;
+  padding: 10px 10px;
+}
